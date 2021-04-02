@@ -10,9 +10,25 @@ body {
     font-size: 16pt;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: anton, sans-serif;
     font-weight: 400;
+    padding-bottom: 5%;
+}
+
+a {
+  color: #368dc4;
+  text-decoration: none;
+}
+
+p {
+  padding-bottom: 3%;
+
+}
+
+
+button {
+  font-size: 1.5rem;
 }
 
 /*START NAVIGATION*/
@@ -179,75 +195,138 @@ nav {
   /*END NAVIGATION*/
 
 
-  /*MOBILE HERO START*/
+/*MOBILE HERO START*/
 
-  #hero-mobile {
-    text-align: center;
-  }
+#hero-mobile {
+  text-align: center;
+  background-image: url(img/happydog1.png);
+  background-size: cover;
+  background-position: center;
+  height: 750px;
+}
 
-  #hero-mobile .adopt {
-    width: 40%;
-    padding: 5%;
-    background-color: #235b99;
-    color: white;
-    font-family: anton, sans-serif;
-    font-weight: 400;
-    letter-spacing: .5pt;
-  }
+#hero-mobile h1 {
+  color: white;
+  width: 235px;
+  margin: 0 auto;
+  position: relative;
+  top: 4%;
+  padding-bottom: 0;
+}
 
+#hero-mobile h3 {
+  color: #a1a7a8;
+  position: relative;
+  top: 60%;
+  letter-spacing: .5pt;
+  padding-bottom: 0;
+}
 
-  /*MOBILE SERVICES START*/
+#hero-mobile .adopt {
+  width: 205px;
+  padding: 3%;
+  background-color: #235b99;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  top: 63%;
+}
 
-  #services-mobile button {
-    width: 100%;
-    padding: 5%;
-    color: white;
-    font-family: anton, sans-serif;
-    font-weight: 400;
-    letter-spacing: .5pt;
-  }
-
-  #services-mobile .daycare {
-    background-color: #368dc4;
-  }
-
-  #services-mobile .daycare:hover {
-    background-color: #3ca3ce;
-  }
-
-  #services-mobile .sitting {
-    background-color: #e97c34;
-  }
-
-  #services-mobile .sitting:hover {
-    background-color: #a1a7a8;
-  }
-
-  #services-mobile .concierge {
-    background-color: #235b99;
-  }
-
-  #services-mobile .concierge:hover {
-    background-color: #368dc4;
-  }
-
-  #services-mobile .taxi {
-    background-color: #3ca3ce;
-  }
-
-  #services-mobile .taxi:hover {
-    background-color: #a1a7a8;
-  }
-
-  /*MOBILE SERVICES END*/
+/*MOBILE HERO END*/
 
 
-  /*START FOOTER*/
+/*MOBILE SERVICES START*/
 
-  footer {
-    background-color: #1e2021;
-    color: white;
-    font-size: 12pt;
-    text-align: center;
-    padding: 5%;
-  }
+#services-mobile button {
+  width: 100%;
+  padding: 5%;
+  color: white;
+  font-family: anton, sans-serif;
+  font-weight: 400;
+  letter-spacing: .5pt;
+}
+
+#services-mobile .daycare {
+  background-color: #368dc4;
+}
+
+#services-mobile .daycare:hover {
+  background-color: #3ca3ce;
+}
+
+#services-mobile .sitting {
+  background-color: #e97c34;
+}
+
+#services-mobile .sitting:hover {
+  background-color: #a1a7a8;
+}
+
+#services-mobile .concierge {
+  background-color: #235b99;
+}
+
+#services-mobile .concierge:hover {
+  background-color: #368dc4;
+}
+
+#services-mobile .taxi {
+  background-color: #3ca3ce;
+}
+
+#services-mobile .taxi:hover {
+  background-color: #a1a7a8;
+}
+
+/*MOBILE SERVICES END*/
+
+
+/*MOBILE DESCRIPTION & ADDITIONALS START*/
+
+#description {
+  padding: 5%;
+}
+
+#description span {
+  color: #e97c34;
+}
+
+#additional img {
+  width: 100%;
+}
+
+#support {
+  background-color: #235b99;
+  color: white;
+  text-align: center;
+  padding: 25% 0;
+}
+
+#support .donate {
+  background-color: #e97c34;
+  color: white;
+  padding: 2% 9%;
+  font-size: 12pt;
+}
+
+#connect {
+  background-color: #368dc4;
+  color: white;
+  text-align: center;
+  padding: 25% 0;
+}
+
+
+
+/*MOBILE DESCRIPTION & ADDITIONALS END*/
+
+
+/*START FOOTER*/
+
+footer {
+  background-color: #1e2021;
+  color: white;
+  font-size: 12pt;
+  text-align: center;
+  padding: 7% 5% 5% 5%;
+}
