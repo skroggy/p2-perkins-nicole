@@ -23,15 +23,20 @@ h1 {
 a {
   color: #368dc4;
   text-decoration: none;
+  transition: 0.4s;
 }
 
-p {
+p, li{
   padding-bottom: 3%;
+}
 
+ol {
+  padding: 0 5%;
 }
 
 button {
   font-size: 1.5rem;
+  transition: 0.4s;
 }
 
 /*START NAVIGATION*/
@@ -234,44 +239,49 @@ nav {
 
 /*MOBILE SERVICES START*/
 
-#services-mobile button {
+#services-desktop {
+  display: none;
+}
+
+#services-mobile button, #services-desktop button {
   width: 100%;
   padding: 5%;
   color: white;
   font-family: anton, sans-serif;
   font-weight: 400;
   letter-spacing: .5pt;
+  font-size: 2rem;
 }
 
-#services-mobile .daycare {
+#services-mobile .daycare, #services-desktop .daycare {
   background-color: #368dc4;
 }
 
-#services-mobile .daycare:hover {
+#services-mobile .daycare:hover, #services-desktop .daycare:hover {
   background-color: #3ca3ce;
 }
 
-#services-mobile .sitting {
+#services-mobile .sitting, #services-desktop .sitting {
   background-color: #e97c34;
 }
 
-#services-mobile .sitting:hover {
+#services-mobile .sitting:hover, #services-desktop .sitting:hover {
   background-color: #a1a7a8;
 }
 
-#services-mobile .concierge {
+#services-mobile .concierge, #services-desktop .concierge {
   background-color: #235b99;
 }
 
-#services-mobile .concierge:hover {
+#services-mobile .concierge:hover, #services-desktop .concierge:hover {
   background-color: #368dc4;
 }
 
-#services-mobile .taxi {
+#services-mobile .taxi, #services-desktop .taxi {
   background-color: #3ca3ce;
 }
 
-#services-mobile .taxi:hover {
+#services-mobile .taxi:hover, #services-desktop .taxi:hover {
   background-color: #a1a7a8;
 }
 
@@ -301,13 +311,14 @@ nav {
   color: white;
   text-align: center;
   padding: 25% 0;
+  font-size: 2rem;
 }
 
 #support .donate {
   background-color: #e97c34;
   color: white;
   padding: 2% 9%;
-  font-size: 12pt;
+  font-size: 1.5rem;
 }
 
 #support .donate:hover {
@@ -319,6 +330,7 @@ nav {
   color: white;
   text-align: center;
   padding: 25% 0;
+  font-size: 2rem;
 }
 
 /*DESCRIPTION & ADDITIONALS END*/
@@ -375,36 +387,27 @@ nav {
     background-color: #3ca3ce;
   }
 
+  #services-desktop {
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+  }
+
+  #services-desktop figure {
+    width: 25%;
+    text-align: center;
+  }
+
+  #services-desktop figure img {
+    width: 100%;
+  }
+
+  #services-desktop figure button {
+    font-size: 0.92rem;
+  }
+
   #description {
     font-size: 14pt;
-  }
-
- .cat1 {
-  display: block;
- }
-
- .cat1 img {
-  width: 100%;
-}
-
-@media (min-width: 1200px) {
-  #description-container {
-    display: flex;
-  }
-
-  #description {
-    width: 50%;
-    padding-right: 1%;
-  }
-
-  .cat1 {
-    padding-right: 2%;
-    width: 47%;
-  }
-  
-  .cat1 img {
-    position: relative;
-    top: 20%;
   }
 
   #additional {
@@ -415,14 +418,33 @@ nav {
   #additional img {
     width: 30%;
   }
+}
 
-  #support, #connect {
-    font-size: 2rem;
-    padding: 20%;
+@media (min-width: 1300px) {
+  #description-container {
+    display: flex;
   }
 
-  #support .donate {
-    font-size: 1.5rem;
+  #description {
+    padding-right: 2%;
+  }
+
+  .cat1 {
+    display: block;
+    padding-right: 2%;
+  }
+  
+  .cat1 img {
+    position: relative;
+    top: 15%;
+  }
+
+  #support, #connect {
+    padding: 15%;
+  }
+
+  #services-desktop figure button {
+    font-size: 1.2rem;
   }
 }
 
@@ -435,4 +457,117 @@ footer {
   font-size: 12pt;
   text-align: center;
   padding: 7% 5% 5% 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SERVICES PAGE CSS START*/
+
+/*MOBILE SERVICES HERO START*/
+
+#services-hero-desktop {
+  display: none;
+}
+
+#services-hero-mobile {
+  text-align: center;
+  background-image: url(img/happycat.png);
+  background-size: cover;
+  background-position: 20% center;
+  height: 800px;
+}
+
+#services-hero-mobile h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0 auto;
+  position: relative;
+  top: 6%;
+  padding-bottom: 0;
+}
+
+#services-hero-mobile .quote {
+  width: 205px;
+  padding: 3%;
+  background-color: #235b99;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  top: 62%;
+}
+
+#services-hero-mobile .quote:hover {
+  background-color: #3ca3ce;
+}
+
+/*MOBILE HERO END*/
+
+
+
+/*SERVICES DETAILS START*/
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #235b99;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+.accordion span {
+  float: right;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.selected, .accordion:hover {
+  background-color: #e97c34;
+}
+
+.mb {
+  background-color: #368dc4;
+}
+
+.lb {
+  background-color: #3ca3ce;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  font-size: 12pt;
+}
+
+.panel a {
+  color: #e97c34;
+}
+
+/*SERVICES DETAILS END*/
+
+/*BENEFITS SECTION START*/
+
+.benefits {
+  background-color: #e97c34;
+  color: white;
+}
+
+.benefits h1 {
+  color: white;
 }
