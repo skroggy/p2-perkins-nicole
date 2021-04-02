@@ -16,6 +16,10 @@ h1, h2, h3 {
     padding-bottom: 5%;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 a {
   color: #368dc4;
   text-decoration: none;
@@ -25,7 +29,6 @@ p {
   padding-bottom: 3%;
 
 }
-
 
 button {
   font-size: 1.5rem;
@@ -53,13 +56,11 @@ nav {
     max-width: 157px;
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
     background-color: #1e2021;
     overflow: hidden;
   }
   
-  /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     display: block;
@@ -70,24 +71,20 @@ nav {
     font-size: 12px;
   }
   
-  /* Add an active class to highlight the current page */
   .active {
     background-color: #e97c34;
     color: white;
   }
   
-  /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
   }
   
-  /* Dropdown container - needed to position the dropdown content */
   .dropdown {
     float: left;
     overflow: hidden;
   }
   
-  /* Style the dropdown button to fit inside the topnav */
   .dropdown .dropbtn {
     font-size: 12px;
     border: none;
@@ -99,7 +96,6 @@ nav {
     margin: 0;
   }
   
-  /* Style the dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -109,7 +105,6 @@ nav {
     z-index: 1;
   }
   
-  /* Style the links inside the dropdown */
   .dropdown-content a {
     float: none;
     color: white;
@@ -118,25 +113,21 @@ nav {
     display: block;
     text-align: left;
   }
-  
-  /* Add a dark background on topnav links and the dropdown button on hover */
+ 
   .topnav a:hover, .dropdown:hover .dropbtn {
     background-color: #a1a7a8;
     color: white;
   }
   
-  /* Add a grey background to dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #a1a7a8;
     color: white;
   }
   
-  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
   .dropdown:hover .dropdown-content {
     display: block;
   }
   
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   @media screen and (max-width: 800px) {
     .topnav a, .dropdown .dropbtn {
       display: none;
@@ -154,10 +145,7 @@ nav {
     .logo {
       padding: 10px 0;
     }
-}
   
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 800px) {
     .topnav.responsive {
       position: relative;
     }
@@ -197,20 +185,25 @@ nav {
 
 /*MOBILE HERO START*/
 
+#hero-desktop {
+  display: none;
+}
+
 #hero-mobile {
   text-align: center;
   background-image: url(img/happydog1.png);
   background-size: cover;
   background-position: center;
-  height: 750px;
+  height: 800px;
 }
 
 #hero-mobile h1 {
   color: white;
-  width: 235px;
+  font-size: 3rem;
+  width: 303px;
   margin: 0 auto;
   position: relative;
-  top: 4%;
+  top: 6%;
   padding-bottom: 0;
 }
 
@@ -229,7 +222,11 @@ nav {
   color: white;
   font-weight: 500;
   position: relative;
-  top: 63%;
+  top: 62%;
+}
+
+#hero-mobile .adopt:hover {
+  background-color: #3ca3ce;
 }
 
 /*MOBILE HERO END*/
@@ -281,7 +278,7 @@ nav {
 /*MOBILE SERVICES END*/
 
 
-/*MOBILE DESCRIPTION & ADDITIONALS START*/
+/*DESCRIPTION & ADDITIONALS START*/
 
 #description {
   padding: 5%;
@@ -289,6 +286,10 @@ nav {
 
 #description span {
   color: #e97c34;
+}
+
+.cat1 {
+  display: none;
 }
 
 #additional img {
@@ -309,6 +310,10 @@ nav {
   font-size: 12pt;
 }
 
+#support .donate:hover {
+  background-color: #a1a7a8;
+}
+
 #connect {
   background-color: #368dc4;
   color: white;
@@ -316,9 +321,110 @@ nav {
   padding: 25% 0;
 }
 
+/*DESCRIPTION & ADDITIONALS END*/
 
 
-/*MOBILE DESCRIPTION & ADDITIONALS END*/
+
+/*DESKTOP LAYOUT START*/
+
+
+@media screen and (min-width: 801px) {
+  #hero-mobile {
+    display: none;
+  }
+
+  #services-mobile {
+    display: none;
+  }
+
+  #hero-desktop {
+    display: block;
+    text-align: right;
+    background-image: url(img/happydog2.png);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    padding: 7%;
+  }
+  
+  #hero-desktop h1 {
+    color: white;
+    font-size: 4rem;
+    top: 6%;
+    padding-bottom: 0;
+  }
+  
+  #hero-desktop h3 {
+    color: #1e2021;
+    letter-spacing: .5pt;
+    padding-bottom: 0;
+    font-size: 2rem;
+  }
+  
+  #hero-desktop .adopt2 {
+    width: 250px;
+    padding: 2%;
+    background-color: #235b99;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    top: 55%;
+  }
+  
+  #hero-desktop .adopt2:hover {
+    background-color: #3ca3ce;
+  }
+
+  #description {
+    font-size: 14pt;
+  }
+
+ .cat1 {
+  display: block;
+ }
+
+ .cat1 img {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  #description-container {
+    display: flex;
+  }
+
+  #description {
+    width: 50%;
+    padding-right: 1%;
+  }
+
+  .cat1 {
+    padding-right: 2%;
+    width: 47%;
+  }
+  
+  .cat1 img {
+    position: relative;
+    top: 20%;
+  }
+
+  #additional {
+    display: flex;
+    justify-content: center;
+  }
+
+  #additional img {
+    width: 30%;
+  }
+
+  #support, #connect {
+    font-size: 2rem;
+    padding: 20%;
+  }
+
+  #support .donate {
+    font-size: 1.5rem;
+  }
+}
 
 
 /*START FOOTER*/
