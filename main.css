@@ -334,6 +334,11 @@ nav {
   font-size: 2rem;
 }
 
+#connect img {
+  width: 7%;
+  padding: 0 2%;
+}
+
 /*DESCRIPTION & ADDITIONALS END*/
 
 
@@ -407,6 +412,12 @@ nav {
     font-size: 0.92rem;
   }
 
+  #services-desktop figure figcaption {
+    text-align: left;
+    font-size: 12pt;
+    padding: 2%;
+  }
+
   #description {
     font-size: 14pt;
   }
@@ -418,6 +429,14 @@ nav {
 
   #additional img {
     width: 30%;
+  }
+
+  #support, #connect {
+    font-size: 3rem;
+  }
+
+  #support .donate {
+    font-size: 2rem;
   }
 }
 
@@ -567,12 +586,34 @@ footer {
 
 .benefits h1 {
   color: white;
+  padding-top: 5%;
 }
 
 
 /*SERVICES DESKTOP LAYOUT START*/
 
 @media screen and (min-width: 801px){
+  #services-hero {
+    text-align: right;
+    height: 500px;
+    padding: 7%;
+  }
+  
+  #services-hero h1 {
+    font-size: 4rem;
+    top: 6%;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  
+  #services-hero .quote {
+    width: 250px;
+    padding: 2%;
+    font-weight: 500;
+    position: relative;
+    top: 8%;
+  }
+  
   #container {
     display: flex;
     padding: 0 5% 10% 5%;
@@ -593,27 +634,6 @@ footer {
 
   #container #description-container #description {
     padding-top: 0;
-  }
-
-  #services-hero {
-    text-align: right;
-    height: 500px;
-    padding: 7%;
-  }
-  
-  #services-hero h1 {
-    font-size: 4rem;
-    top: 6%;
-    width: 100%;
-    padding-bottom: 0;
-  }
-  
-  #services-hero .quote {
-    width: 250px;
-    padding: 2%;
-    font-weight: 500;
-    position: relative;
-    top: 8%;
   }
 }
 
@@ -660,6 +680,10 @@ footer {
   font-weight: 600;
   background-color: #235b99;
   padding: 2% 5%;
+}
+
+.title {
+  padding: 5%;
 }
 
 #donations figure {
