@@ -37,6 +37,7 @@ ol {
 button {
   font-size: 1.5rem;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 /*START NAVIGATION*/
@@ -461,16 +462,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*SERVICES PAGE CSS START*/
 
 /*MOBILE SERVICES HERO START*/
@@ -479,7 +470,7 @@ footer {
   display: none;
 }
 
-#services-hero-mobile {
+#services-hero {
   text-align: center;
   background-image: url(img/happycat.png);
   background-size: cover;
@@ -487,16 +478,17 @@ footer {
   height: 800px;
 }
 
-#services-hero-mobile h1 {
+#services-hero h1 {
   color: white;
   font-size: 3rem;
+  width: 300px;
   margin: 0 auto;
   position: relative;
   top: 6%;
   padding-bottom: 0;
 }
 
-#services-hero-mobile .quote {
+#services-hero .quote {
   width: 205px;
   padding: 3%;
   background-color: #235b99;
@@ -506,21 +498,32 @@ footer {
   top: 62%;
 }
 
-#services-hero-mobile .quote:hover {
+#services-hero .quote:hover {
   background-color: #3ca3ce;
 }
 
-/*MOBILE HERO END*/
+/*MOBILE SERVICES HERO END*/
 
 
 
 /*SERVICES DETAILS START*/
 
-/* Style the buttons that are used to open and close the accordion panel */
+.blurb {
+  color: white;
+  background-color: #3ca3ce;
+  padding: 2% 5%;
+}
+
+#container {
+  padding-bottom: 10%;
+  background-image: url(img/pawprint.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
 .accordion {
   background-color: #235b99;
   color: white;
-  cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
@@ -532,7 +535,6 @@ footer {
   float: right;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .selected, .accordion:hover {
   background-color: #e97c34;
 }
@@ -545,14 +547,12 @@ footer {
   background-color: #3ca3ce;
 }
 
-
-/* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 18px;
   background-color: white;
   display: none;
   overflow: hidden;
   font-size: 12pt;
+  padding: 3%;
 }
 
 .panel a {
@@ -571,3 +571,53 @@ footer {
 .benefits h1 {
   color: white;
 }
+
+
+/*SERVICES DESKTOP LAYOUT START*/
+
+@media (min-width: 801px){
+  #container {
+    display: flex;
+    padding: 0 5% 10% 5%;
+  }
+
+  .blurb {
+    margin-bottom: 3%;
+  }
+
+  #service-details {
+    width: 40%;
+  }
+
+  #container #description-container {
+    display: block;
+    width: 60%;
+  }
+
+  #container #description-container #description {
+    padding-top: 0;
+  }
+
+  #services-hero {
+    text-align: right;
+    height: 600px;
+    padding: 7%;
+  }
+  
+  #services-hero h1 {
+    font-size: 4rem;
+    top: 6%;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  
+  #services-hero .quote {
+    width: 250px;
+    padding: 2%;
+    font-weight: 500;
+    position: relative;
+    top: 8%;
+  }
+}
+
+/*SERVICES PAGE CSS END*/
