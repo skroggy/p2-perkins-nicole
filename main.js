@@ -7,6 +7,14 @@ function myFunction() {
   }
 }
 
+document.getElementById("resbtn").addEventListener("click", function() {
+  window.location = "donate.html"
+});
+
+document.getElementById("servbtn").addEventListener("click", function() {
+  window.location = "services.html"
+});
+
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -23,6 +31,7 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {

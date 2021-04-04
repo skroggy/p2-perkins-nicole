@@ -34,16 +34,26 @@ ol {
   padding: 0 5%;
 }
 
+img {
+  display: block;
+}
+
 button {
   font-size: 1.5rem;
   transition: 0.4s;
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*START NAVIGATION*/
 
-nav {
+header {
     background-color: #1e2021;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    z-index: 2;
+    margin-bottom: -2px;
+    height: 53px;
 }
 
 .thumb {
@@ -55,16 +65,15 @@ nav {
   }
 
   .logo {
-    width: 14%;
-    padding: 6px 0;
+    width: 165px;
+    padding: 10px 0 0 5px;
     float: left;
-    min-width: 105px;
-    max-width: 157px;
 }
 
 .topnav {
     background-color: #1e2021;
     overflow: hidden;
+    float:right
   }
   
   .topnav a {
@@ -72,9 +81,10 @@ nav {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px 14px 16px;
     text-decoration: none;
     font-size: 12px;
+    height: 23px;
   }
   
   .active {
@@ -90,18 +100,22 @@ nav {
     float: left;
     overflow: hidden;
   }
+
+  .dropbtn {
+    height: inherit;
+  }
   
   .dropdown .dropbtn {
     font-size: 12px;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 16px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -138,22 +152,15 @@ nav {
     .topnav a, .dropdown .dropbtn {
       display: none;
     }
+
+    .topnav.responsive {
+      position: absolute;
+      right: 0;
+    }
     
     .topnav a.icon {
       float: right;
       display: block;
-    }
-
-    .thumb {
-      padding: 10px 0 10px 5px;
-    }
-
-    .logo {
-      padding: 10px 0;
-    }
-  
-    .topnav.responsive {
-      position: relative;
     }
 
     .topnav.responsive a.icon {
@@ -177,11 +184,12 @@ nav {
     .topnav.responsive .dropdown-content {
       position: relative;
       background-color: #353636;
+      width: 250px;
     }
 
     .topnav.responsive .dropdown .dropbtn {
       display: block;
-      width: 100%;
+      width: 250px;
       text-align: left;
     }
   }
@@ -211,6 +219,7 @@ nav {
   position: relative;
   top: 6%;
   padding-bottom: 0;
+  text-shadow: 2px 2px 4px rgb(77, 76, 76);
 }
 
 #hero-mobile h3 {
@@ -219,6 +228,7 @@ nav {
   top: 60%;
   letter-spacing: .5pt;
   padding-bottom: 0;
+  text-shadow: 2px 2px 4px rgb(77, 76, 76);
 }
 
 #hero-mobile .adopt {
@@ -305,6 +315,7 @@ nav {
 
 #additional img {
   width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #support {
@@ -330,13 +341,14 @@ nav {
   background-color: #368dc4;
   color: white;
   text-align: center;
-  padding: 25% 0;
+  padding: 15% 0;
   font-size: 2rem;
 }
 
 #connect img {
   width: 7%;
   padding: 0 2%;
+  display: inline;
 }
 
 /*DESCRIPTION & ADDITIONALS END*/
@@ -370,6 +382,7 @@ nav {
     font-size: 4rem;
     top: 6%;
     padding-bottom: 0;
+    text-shadow: 2px 2px 4px rgb(77, 76, 76);
   }
   
   #hero-desktop h3 {
@@ -377,6 +390,7 @@ nav {
     letter-spacing: .5pt;
     padding-bottom: 0;
     font-size: 2rem;
+    text-shadow: 2px 2px 4px rgb(77, 76, 76);
   }
   
   #hero-desktop .adopt2 {
@@ -397,6 +411,9 @@ nav {
     display: flex;
     justify-content: center;
     padding: 0 5%;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
   }
 
   #services-desktop figure {
@@ -406,6 +423,7 @@ nav {
 
   #services-desktop figure img {
     width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   #services-desktop figure button {
@@ -425,6 +443,9 @@ nav {
   #additional {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -20px;
   }
 
   #additional img {
@@ -460,7 +481,7 @@ nav {
   }
 
   #support, #connect {
-    padding: 15%;
+    padding: 7%;
   }
 
   #services-desktop figure button {
@@ -545,6 +566,7 @@ footer {
   text-align: left;
   border: none;
   outline: none;
+  box-shadow: none;
 }
 
 .accordion span {
@@ -604,6 +626,7 @@ footer {
     top: 6%;
     width: 100%;
     padding-bottom: 0;
+    text-shadow: 2px 2px 4px rgb(77, 76, 76);
   }
   
   #services-hero .quote {
@@ -663,6 +686,7 @@ footer {
   position: relative;
   top: 20%;
   padding-bottom: 0;
+  text-shadow: 2px 2px 4px rgb(77, 76, 76);
 }
 
 #donate-hero h3 {
@@ -671,6 +695,7 @@ footer {
   top: 70%;
   letter-spacing: .5pt;
   padding-bottom: 0;
+  text-shadow: 2px 2px 4px rgb(77, 76, 76);
 }
 
 /*MOBILE DONATE HERO END*/
