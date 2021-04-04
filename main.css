@@ -706,6 +706,23 @@ footer {
   font-size: 10pt;
 }
 
+.orgs-container {
+  background-color: #a1a7a8;
+}
+
+#orgs article{
+  padding: 5%;
+}
+
+#orgs p {
+  padding-bottom: 0;
+}
+
+#org1name, #org2name, #org3name, #org4name, #org5name, #org6name {
+  color: #235b99;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 801px) {
   #donate-hero {
     text-align: right;
@@ -745,5 +762,21 @@ footer {
 
   #donations figure .seal {
     max-width: 250px;
+  }
+
+  #orgs {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  #orgs article {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  #orgs article {
+    width: 23%;
   }
 }
